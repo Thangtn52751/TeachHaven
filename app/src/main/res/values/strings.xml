@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Techhaven</string>
+    <string name="btn_SignIn">Sign In</string>
+    <string name="btn_SignUp">Sign Up</string>
+    <string name="edt_username">Username</string>
+    <string name="edt_password">Password</string>
+    <string name="exceptional_care_n_close_yo_you">Techhaven</string>
+    <string name="make_appointment">Make Appointment</string>
+    <string name="QlPhongBan_nav">QlPhongBan_nav</string>
+    <string name="QlNhanVien_nav">QlNhanVien_nav</string>
+    <string name="Open_Nav">Open</string>
+    <string name="Close_Nav">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

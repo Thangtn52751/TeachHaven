@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm Nhân Viên"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:hint="Nhập mã nhân viên..."
+            android:minHeight="48dp"
+            android:id="@+id/edt_employeeID_add"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textPersonName"
+            android:hint="Nhập tên nhân viên..."
+            android:minHeight="48dp"
+            android:id="@+id/edt_employeeName_add"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textPersonName"
+            android:hint="Tên đệm... "
+            android:id="@+id/edt_Employee_MiddleName_add"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:hint="Mức lương "
+            android:id="@+id/edt_Empolyee_Salary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Số điện thoại..."
+            android:minHeight="48dp"
+            android:inputType="phone|number"
+            android:id="@+id/edt_emplyeepn_add"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Email..."
+            android:minHeight="48dp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/edt_employeeEmail_add"/>
+
+        <EditText
+            android:id="@+id/edt_employeeDepartmentId_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="10dp"
+            android:hint="Mã Văn Phòng..."
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Password..."
+            android:minHeight="48dp"
+            android:inputType="number"
+            android:id="@+id/edt_password"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Thêm Nhân Viên"
+            android:id="@+id/add_Employee"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:id="@+id/btn_back_add"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

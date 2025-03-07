@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Chức năng chính">
+        <menu>
+    <item android:id="@+id/QlPhongBan_nav"
+        android:title="Quản lý phòng ban"
+        android:icon="@drawable/mall"/>
+    <item android:id="@+id/QlNhanVien_nav"
+        android:title="Quản lý nhân viên"
+        android:icon="@drawable/user"/>
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+        <item android:title="Khác">
+            <menu>
+                <item android:id="@+id/UpdatePassWord"
+                    android:title="Đổi mật khẩu"
+                    android:icon="@drawable/lock_reset"/>
+                <item android:id="@+id/Logout_nav"
+                    android:title="Đăng xuất"
+                    android:icon="@drawable/ic_logout"/>
+            </menu>
+        </item>
+    </group>
+</menu>

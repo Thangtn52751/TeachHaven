@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingLeft="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp">
+
+    <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backSideColor="#303030"
+        app:animationDuration="700">
+
+        <FrameLayout
+            android:id="@+id/cell_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="325dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/light_black_bg">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gl1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/img"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        style="@style/Style.App.circleImageView"
+                        android:src="@drawable/user"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/white"/>
+                    <TextView
+                        android:id="@+id/Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thông tin chi tiết nhân viên"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#E53935"
+                        app:layout_constraintTop_toBottomOf="@+id/img"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                        android:id="@+id/Empolyee_Id_Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/Content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14dp"
+                        android:text="Mã nhân viên"/>
+                    <TextView
+                        android:id="@+id/Empolyee_Name_Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/Empolyee_Id_Content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:text="Tên: "/>
+
+                    <TextView
+                        android:id="@+id/Empolyee_Middlename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tên đệm"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toStartOf="@+id/gl1"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Empolyee_Name_Content" />
+
+                    <TextView
+                        android:id="@+id/Empolyee_Id_Department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/Empolyee_Email"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:text="Mã phòng ban"/>
+                    <TextView
+                        android:id="@+id/Empolyee_ChucVu_Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/Content"
+                        app:layout_constraintStart_toStartOf="@+id/gl1"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:text="Chức vụ"/>
+                    <TextView
+                        android:id="@+id/Empolyee_PhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/Empolyee_ChucVu_Content"
+                        app:layout_constraintStart_toStartOf="@+id/gl1"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:text="Số điện thoại"/>
+                    <TextView
+                        android:id="@+id/tv_Empolyee_salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/Empolyee_PhoneNumber"
+                        app:layout_constraintStart_toStartOf="@+id/gl1"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:text="Lương"/>
+
+                    <TextView
+                        android:id="@+id/Empolyee_Email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Email"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Empolyee_Middlename" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/Empolyee_Id_Department"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/ic_update"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:focusableInTouchMode="false"
+                            android:src="@drawable/ic_edit"
+                            android:layout_height="wrap_content"/>
+                        <ImageView
+                            android:id="@+id/ic_delete"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:focusableInTouchMode="false"
+                            android:src="@drawable/ic_delete"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="visible">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                app:cardCornerRadius="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/light_black_bg">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/Empolyee_img"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        style="@style/Style.App.circleImageView"
+                        android:scaleType="centerCrop"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@color/white"
+                        android:src="@drawable/user"/>
+                    <TextView
+                        android:id="@+id/Empolyee_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/yellow"
+                        android:text="Mã nhân viên"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/Empolyee_img" />
+                    <TextView
+                        android:id="@+id/Empolyee_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/yellow"
+                        android:text="Tên nhân viên"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/Empolyee_Id"
+                        app:layout_constraintStart_toEndOf="@+id/Empolyee_img" />
+                    <TextView
+                        android:id="@+id/Empolyee_ChucVu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/yellow"
+                        android:text="Chức vụ nhân viên"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/Empolyee_name"
+                        app:layout_constraintStart_toEndOf="@+id/Empolyee_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+    </com.ramotion.foldingcell.FoldingCell>
+
+</LinearLayout>
